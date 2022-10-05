@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f90c285133.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+             <div class="logo">Rushikesh Chincholkar</div>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Rushikesh</span><br>Chincholkar</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                   <img src="images/user.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello Everyone! <br><br> My name is Rushikesh Chincholkar. I am BCA 2nd Year Student and I am from Amaravati, Maharashtra. I like to learn about new Skills that's why I learn Coding. I was start my Coding Journey from my Android Phone. <br>I believe that Opportunities are everywhere but things can not stop you. I am always trying to learn new. I like Web develpment but always Explore some AI , Photo Editing, Video Editing and other Coding languages like Java, C++, Python, etc. <br>In the next few decades, India will rise as the leader of the World with the maximum young workforce but for this, we need some good pilots who can take us through this. I want to contribute in this rising India. <br> <br> Also I like to play Cricket and  Drawing that's why, when I am not Working I usually spend my time in Playing or Watching Cricket and Drawing. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="education">
+      <div class="container">
+          <h1 class="sub-title">Education</h1>
+          <div class="education-list">
+              <div>
+                  <h2>HVPM Degree College of Physical Education, Amaravati</h2>
+                  <h3>BCA, 2nd Year Student</h3>
+                  <br>
+                  <p>I spending the best 3 years at this college. It helps me explore my potential. thanks to the faculties to learn about Coding & dive into new domains and try new ventures.</p>
+              </div>
+              <div>
+                  <h2>Municipal Junior College, Paratwada</h2>
+                  <h3>High School, 11th & 12th </h3>
+                  <br>
+                  <p>
+                  I shifted to Municipal Junior College in my Class 11th and 12th to get better Education.
+                  <br><br>
+                  In my 11th & 12th, before learning syllabus I was learn about people. How they are use you, how they are troll you, how they are help and many more.
+                  <br> In my Class 11th, I played Cricket for my College as a All-rounder.
+                 </p>
+                  
+              </div>
+              <div>
+                  <h2>Siddharth High School, Paratwada</h2>
+                  <h3>5th - 10th</h3>
+                  <br>
+
+                  <p>In my class 10th, I played Cricket for my School as a Baller. <br>
+                  I shifted to Siddhartha High School for a better study Environment and my young brother was there.</p>
+                 
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+  <div id="projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+               <h1>Projects will Come Very Soon. Some Problems are going that's Why Projects are not apploaded.</h1>
+                <div class="layer">
+                    <h2>Sorry ! Projects are facing some issues.</h2>
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div id="contact">
+      <div class="container">
+          <div class="row">
+              <div class="contact-left">
+                  <h1 class="sub-title">Contact Me</h1>
+                  <p><i class="fa-solid fa-paper-plane"></i>rushikeshchincholkar08@gmail.com</p>
+                  <div class="social-icons">
+                      <a href="https://github.com/RushiCoder"><i class="fa-brands fa-github"></i></a>
+                      <a href="https://replit.com/@RushikeshChinch"><i class="fa-solid fa-dharmachakra"></i></a>
+                      <a href="https://www.linkedin.com/in/rushikesh-chincholkar-2nd-57353621a/"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+
+
+              </div>
+              <div class="contact-right">
+                  <form name="submit-to-google-sheet">
+                      <input type="text" name="Name" placeholder="Your Name" required>
+                      <input type="email" name="email" placeholder="Your Email" spellcheck="fasle" id="email-field" id="email-field" onkeyup="validateEmail()" required>
+                      <span id="email-error"></span>
+                      <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                      <button type="submit" class="btn btn2" >Submit</button>
+                  </form>
+                  <span id="msg"></span>
+              </div>
+          </div>
+      </div>
+      <div class="copyright">
+          <p> Follow On LinkedIn <i class="fa-solid fa-heart"></i></p>
+      </div>
+  </div>
+  
+
+  <script>
+    var emailField = document.getElementById("email-field");
+    var emailLabel = document.getElementById("email-label");
+    var emailError = document.getElementById("email-error");
+
+    function validateEmail() {
+     if(!emailField.value.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+      emailError.innerHTML = "Please enter valid email";
+      return false;
+     }
+     emailError.innerHTML = "";
+     return true;
+    }
+
+  </script>
+  
+  
+  
+  <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+  
+      function opentab(tabname){
+          for(tablink of tablinks) {
+              tablink.classList.remove("active-link");
+          }
+          for(tabcontent of tabcontents) {
+              tabcontent.classList.remove("active-tab");
+          }
+          event.currentTarget.classList.add("active-link");
+          document.getElementById(tabname).classList.add("active-tab");
+      }
+  
+  
+  </script>
+  <script>
+      var sidemenu = document.getElementById("sidemenu");
+  
+      function openmenu() {
+          sidemenu.style.right = "0";
+      }
+  
+      function closemenu() {
+          sidemenu.style.right = "-200px";
+      }
+  </script>
+  <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwKcji-AWLMMUInn5d9AK4t3R9vKpesB-0d02VA7xWf9Os56PBhMNoVV53xltPoY64UiQ/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+      form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+              msg.innerHTML = "Message sent successfully"
+              setTimeout(function(){
+                  msg.innerHTML = ""
+              },5000)
+              form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+  </script>
+
+</body>
+</html>
